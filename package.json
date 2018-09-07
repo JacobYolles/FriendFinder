@@ -1,0 +1,31 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "friend (Cartoon) finder",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobYolles/FriendFinder.git"
+  },
+  "keywords": [
+    "friend",
+    "dating",
+    "finder"
+  ],
+  "author": "Jake Yolles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacobYolles/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/JacobYolles/FriendFinder#readme"
+}
