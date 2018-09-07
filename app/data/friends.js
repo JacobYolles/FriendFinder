@@ -174,4 +174,3 @@ var friendsArray = [
 
 ];// end of the friends array variable.
 
-module.exports = friendsArray;

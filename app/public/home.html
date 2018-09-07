@@ -1,90 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Friend Finder Pro</title>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
 
-	<!-- Link to the jQuery Library -->
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  	<!-- Including Font Awesome Icons -->
-  	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-	<!-- Link to reset stylesheet -->
-	<link rel="stylesheet" href="css/reset.css">
-
-	<!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-	<!-- Compiled and minified Materialize CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-	<!-- Compiled and minified Materialize JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-          
-	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    
-	<header>
-		<nav>
-			<div class="nav-wrapper pink accent-2">
-				<i class="fa fa-address-book-o fa-5x" aria-hidden="true" id=logo-icon></i>
-				<a class = "brand-logo">Friend Finder</a>
-				<ul class="right hide-on-med-and-down" id="head-nav-links">
-					<li><a href="/survey">Survey</a></li>
-					<li><a href="/api/friends">API Friends List</a></li>
-					<li><a href="https://github.com/JacobYolles/FriendFinder">GitHub Repo</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+  <div class="container">
 
-	<main>
-		<div class="container">
-			<div class="row">
-				<div class="col s12 z-depth-5 mainpanel">
-					<div id="mainpanel-content">
-						<h1>Friend Finder</h1>
-						<div class="divider"></div>
-						<h2>Answer a few basic questions.</h2>
-						<h2>Find the friend with the greatest compatibility!</h2>
-						<a href="/survey">
-							<button class="btn waves-effect waves-light" type="submit" name="action">Go to Survey
-								<i class="material-icons right">send</i>
-							</button>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
+    <div class="jumbotron">
+      <h1><i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
+      <hr>
+      <h2>Answer a few basic questions. </h2>
+      <h2>Then find the friend with the greatest compatibility!</h2>
+      <br>
 
-	<footer class="page-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class=>Friend Finder App</h5>
-					<p class=>Thank you for taking this brief survey. 
-                        Your responses will be used to match you with a friend!
-                    </p>
-				</div>
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text" style = "text-underline-position: above">Links</h5>
-					<ul>
-						<li><a class="grey-text text-lighten-3" href="/api/friends">API Friends List</a></li>
-						<li><a class="grey-text text-lighten-3" href="https://github.com/JacobYolles/FriendFinder">GitHub Repo</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-			    <a class="grey-text text-lighten-4 right" href="https://github.com/JacobYolles">Other Github Work</a>
-			</div>
-		</div>
-	</footer>
+      <div>
+        <a href="/survey"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Go to Survey</h4></button></a>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+      </div>
+    </footer>
+
+  </div>
+
 
 </body>
+
 </html>
