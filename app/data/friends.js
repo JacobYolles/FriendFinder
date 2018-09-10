@@ -4,7 +4,7 @@ var friendsArray = [
 {
     // 1
     name : "Spongebob Squarepants",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo :"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.studentproblems.com%2Fwp-content%2Fuploads%2F2018%2F05%2Fmeme-culture-900x456.jpg&imgrefurl=https%3A%2F%2Fwww.studentproblems.com%2Fis-spongebob-squarepants-a-dish-sponge-or-a-sea-sponge%2F&docid=y8W0hrkqUkOVKM&tbnid=S5e55sZK6xneIM%3A&vet=10ahUKEwjug72tr6zdAhWzFjQIHUieDawQMwjlASgVMBU..i&w=900&h=456&bih=803&biw=1440&q=spongebob%20squarepants&ved=0ahUKEwjug72tr6zdAhWzFjQIHUieDawQMwjlASgVMBU&iact=mrc&uact=8",
     scores :[
         "1",
         "2",
@@ -140,7 +140,7 @@ var friendsArray = [
   // 9
   {
     name : "Jerry the Mouse",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
     scores :[
         "1",
         "1",
@@ -157,7 +157,7 @@ var friendsArray = [
   //10
   {
     name : "Mario",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo : <img src="FriendFinder/app/data/images/mario.jpeg" width = "250px;" height = "250px;" id="ten" alt="Mario"> </img>,
     scores :[
         "5",
         "4",

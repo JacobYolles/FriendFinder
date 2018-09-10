@@ -15,3 +15,8 @@ module.exports = function(app) {
 		res.sendFile(path.join(__dirname, "../public/survey.html"));
 	});
 };
+
+
+app.listen(PORT, function() {
+	console.log("App listening on PORT " + PORT);
+  });

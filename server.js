@@ -5,12 +5,10 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 // =============================================================
-// SET UP EXPRESS FUNCTIONALITY:
-
 
 // SET UP EXPRESS AND PORT FUNCTIONALITY.
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 5050;
 
 // LET THE CSS BE REACHED.
 app.use(express.static(path.join(__dirname, './app/public')));
@@ -28,5 +26,5 @@ require(path.join(__dirname, "./app/routing/htmlRoutes"))
 
 // START THE SERVER RUNNING.
 app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+    console.log("Friend Finder APP launched on PORT: " + PORT);
   });
