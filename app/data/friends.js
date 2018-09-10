@@ -172,6 +172,6 @@ var friends = [
       ]
   }
 
-];// end of the friends array variable.
+]// end of the friends array variable.
 
 module.exports = friends;
