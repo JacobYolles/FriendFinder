@@ -10,8 +10,7 @@ var port = process.env.PORT || 3000;
 //Body Parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.text());
-app.use(bodyParser.json({type:'application/vnd.api+json'}));
+
 
 // Static files
 // needs to be called before the routes in order to work
