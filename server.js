@@ -1,30 +1,25 @@
-// LOAD DEPENDENCIES:
-// =============================================================
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
+//set up dependencies
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
 
-// =============================================================
+//creates express server and sets up a port
+var app = express(); 
+var port = process.env.PORT || 3000; 
 
-// SET UP EXPRESS AND PORT FUNCTIONALITY.
-var app = express();
-var PORT = process.env.PORT || 5050;
-
-// LET THE CSS BE REACHED.
-app.use(express.static(path.join(__dirname, './app/public')));
-
-// Sets up the Express app to handle data parsing
-// RUNS THE BODY PARSER VARIABLE AS ABLE TO RUN.
-app.use(bodyParser.urlencoded({ extended: true }));
+//Body Parser
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
+app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
-// Add the application routes
-// LET THE SERVER HIT THE PATHS FOR THE ROUTES.
-require(path.join(__dirname, "./app/routing/apiRoutes"))
-require(path.join(__dirname, "./app/routing/htmlRoutes"))
+// Static files
+// needs to be called before the routes in order to work
+app.use(express.static('app/public'));
 
-// START THE SERVER RUNNING.
-app.listen(PORT, function() {
-    console.log("Friend Finder APP launched on PORT: " + PORT);
-  });
+//Router
+require('./app/routing/api-routes.js')(app); 
+require('./app/routing/html-routes.js')(app);
+
+//Listening to the port that was set up
+app.listen(port, () => console.log("Listening on port %s", port));

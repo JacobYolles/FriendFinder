@@ -1,6 +1,6 @@
 // GIVE A THEME TO WHAT ALL THE FRIENDS HAVE IN COMMON. IDEA CARTOON CHARACTERS.
 // This will hold all the data for the friends possibilities. 
-var friendsArray = [
+var friends = [
 {
     // 1
     name : "Spongebob Squarepants",
@@ -157,7 +157,7 @@ var friendsArray = [
   //10
   {
     name : "Mario",
-    photo : <img src="FriendFinder/app/data/images/mario.jpeg" width = "250px;" height = "250px;" id="ten" alt="Mario"> </img>,
+    photo : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
     scores :[
         "5",
         "4",
@@ -174,3 +174,4 @@ var friendsArray = [
 
 ];// end of the friends array variable.
 
+module.exports = friends;
