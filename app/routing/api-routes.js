@@ -1,5 +1,5 @@
 //require the friends data file
-var friends = require('../data/friends.js');
+var friends = require('../data/friends');
 
 //Routes
 module.exports = function(app){
@@ -26,10 +26,13 @@ module.exports = function(app){
 		console.log(req.body)
 		console.log(req.body.scores)
 		
-		console.log(userData.scores)
+	
 		var userName 	= req.body.name;
 		var userPhoto 	= req.body.photo;
-		var userScores 	= req.body.scores;
+		var userScores 	= userData.scores;
+
+		var number = parseInt(userData.scores)
+		console.log(number)
 		console.log(req.body.photo)
 		var totalDifference = 0;
 
@@ -42,10 +45,10 @@ module.exports = function(app){
 
 			// Loop through all the scores of each friend
 			for (var j=0; j< friends[i].scores[j]; j++){
-
+				console.log(friends[i].scores[j])
 				// We calculate the difference between the scores and sum them into the totalDifference
-				totalDifference += Math.abs(parseInt(userScores[j]) - Math.abs(parseInt(friends[i].scores[j])));
-
+				totalDifference = Math.abs(parseInt(userScores[j]) - Math.abs(parseInt(friends[i].scores[j])));
+				console.log(totalDifference)
 				// If the sum of differences is less then the differences of the current "best match"
 				if (totalDifference <= bestMatch.friendDifference){
 
@@ -53,6 +56,8 @@ module.exports = function(app){
 					bestMatch.name = friends[i].name;
 					bestMatch.photo = friends[i].photo;
 					bestMatch.friendDifference = totalDifference;
+					console.log(bestMatch.name)
+					console.log(bestMatch.friendDifference)
 				}
 			}
 		}
