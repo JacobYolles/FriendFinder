@@ -1,10 +1,10 @@
 // GIVE A THEME TO WHAT ALL THE FRIENDS HAVE IN COMMON. IDEA CARTOON CHARACTERS.
 // This will hold all the data for the friends possibilities. 
-var friends = [
+var friendsArray = [
 {
     // 1
     name : "Spongebob Squarepants",
-    photo :"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.studentproblems.com%2Fwp-content%2Fuploads%2F2018%2F05%2Fmeme-culture-900x456.jpg&imgrefurl=https%3A%2F%2Fwww.studentproblems.com%2Fis-spongebob-squarepants-a-dish-sponge-or-a-sea-sponge%2F&docid=y8W0hrkqUkOVKM&tbnid=S5e55sZK6xneIM%3A&vet=10ahUKEwjug72tr6zdAhWzFjQIHUieDawQMwjlASgVMBU..i&w=900&h=456&bih=803&biw=1440&q=spongebob%20squarepants&ved=0ahUKEwjug72tr6zdAhWzFjQIHUieDawQMwjlASgVMBU&iact=mrc&uact=8",
+    photo :"https://www.studentproblems.com/wp-content/uploads/2018/05/meme-culture-900x456.jpg",
     scores :[
        "1",
        "2",
@@ -21,7 +21,7 @@ var friends = [
   // 2
    {
     name : "Bob the Builder",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo :"https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Bob_the_builder.jpg/220px-Bob_the_builder.jpg",
     scores :[
         "4",
         "4",
@@ -38,7 +38,7 @@ var friends = [
   // 3
   {
     name : "Lola Bunny",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo : "https://upload.wikimedia.org/wikipedia/en/0/00/LolaBunnySpaceJam.png",
     scores :[
         "3",
         "3",
@@ -55,7 +55,7 @@ var friends = [
 // 4
   {
     name : "Mickey Mouse",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo :"https://lumiere-a.akamaihd.net/v1/images/navigation_mickeymouseclubhouse_disneyjunior_7844134d.png",
     scores :[
         "5",
         "2",
@@ -72,7 +72,7 @@ var friends = [
   // 5
   {
     name : "Donald Duck",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo :"https://artinsights.com/wp-content/uploads/2013/11/20120919151318.jpg",
     scores :[
         "4",
         "2",
@@ -89,7 +89,7 @@ var friends = [
   // 6
   {
     name : "Goofy",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo :"https://vignette.wikia.nocookie.net/kingdomhearts/images/7/73/Goofy_KH3.png/revision/latest?cb=20180614013649",
     scores :[
        "5",
        "5",
@@ -106,7 +106,7 @@ var friends = [
   // 7
   {
     name : "Cheshire Cat",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo :"https://cdn.shopify.com/s/files/1/0265/4309/products/Cheshire_Cat_12X18_Print_Web_1024x1024.jpg?v=1444065270",
     scores :[
         "4",
         "4",
@@ -123,7 +123,7 @@ var friends = [
   // 8
   {
     name : "Winnie The Pooh",
-    photo :"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo :"https://i.kym-cdn.com/photos/images/original/001/350/900/045.jpg",
     scores :[
         "2",
         "2",
@@ -140,7 +140,7 @@ var friends = [
   // 9
   {
     name : "Jerry the Mouse",
-    photo : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    photo : ".images/jerrythemouse.jpeg",
     scores :[
         "1",
         "1",
@@ -156,8 +156,8 @@ var friends = [
   },
   //10
   {
-    name : "Mario",
-    photo : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    name : "Princess Peach",
+    photo : "https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Peach_%28Super_Mario_3D_World%29.png/220px-Peach_%28Super_Mario_3D_World%29.png",
     scores :[
         "5",
         "4",
@@ -174,4 +174,4 @@ var friends = [
 
 ]// end of the friends array variable.
 
-module.exports = friends;
+module.exports = friendsArray;

@@ -1,77 +1,70 @@
 var config = {
-    ".chosen-select": {},
-    ".chosen-select-deselect": {
-      allow_single_deselect: true
-    },
-    ".chosen-select-no-single": {
-      disable_search_threshold: 10
-    },
-    ".chosen-select-no-results": {
-      no_results_text: "Oops, nothing found!"
-    },
-    ".chosen-select-width": {
-      width: "95%"
-    }
-  };
-
+  '.chosen-select': {},
+  '.chosen-select-deselect': {
+    allow_single_deselect: true
+  },
+  '.chosen-select-no-single': {
+    disable_search_threshold: 10
+  },
+  '.chosen-select-no-results': {
+    no_results_text: 'Oops, nothing found!'
+  },
+  '.chosen-select-width': {
+    width: "100%"
+  }
+}
   for (var selector in config) {
     $(selector).chosen(config[selector]);
   }
-
-  // Capture the form inputs
-  $("#submit").on("click", function(event) {
-    event.preventDefault();
-
-    // Form validation
-    function validateForm() {
-      var isValid = true;
-      $(".form-control").each(function() {
-        if ($(this).val() === "") {
-          isValid = false;
+// Capture the form inputs 
+$("#submit").on("click", function() {
+  // Form validation
+  event.preventDefault();
+  function validateForm() {
+    var isValid = true;
+    $('.form-control').each(function() {
+      if ($(this).val() === '')
+        isValid = false;
+    });
+    $('.chosen-select').each(function() {
+      if ($(this).val() === "")
+        isValid = false
+    })
+    return isValid;
+  }
+  // If all required fields are filled
+  if (validateForm() == true) {
+    // Create an object for the user's data
+    var data = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#q1").val().trim(),
+                    $("#q2").val().trim(),
+                    $("#q3").val().trim(),
+                    $("#q4").val().trim(),
+                    $("#q5").val().trim(),
+                    $("#q6").val().trim(),
+                    $("#q7").val().trim(),
+                    $("#q8").val().trim(),
+                    $("#q9").val().trim(),
+                    $("#q10").val().trim(),
+                ]
+            };
+            console.log(data)
+            $.ajax({
+                method: "POST",
+                url: "/api/friends",
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                success: function (response) {
+                    $("#matchName").text(response.name)
+                    $("#matchPicture").attr("src", response.photo)
+                    $("#matchModal").modal("toggle")
+                    console.log(response)
+                }
+            })
+        } else {
+            alert("Please answer all of the questions before submitting!");
         }
-      });
-
-      $(".chosen-select").each(function() {
-
-        if ($(this).val() === "") {
-          isValid = false;
-        }
-      });
-      return isValid;
-    }
-
-    // If all required fields are filled
-    if (validateForm()) {
-      // Create an object for the user"s data
-      var userData = {
-        name: $("#name").val(),
-        photo: $("#photo").val(),
-        scores: [
-          $("#q1").val(),
-          $("#q2").val(),
-          $("#q3").val(),
-          $("#q4").val(),
-          $("#q5").val(),
-          $("#q6").val(),
-          $("#q7").val(),
-          $("#q8").val(),
-          $("#q9").val(),
-          $("#q10").val()
-        ]
-      };
-
-      // AJAX post the data to the friends API.
-      $.post("/api/friends", userData, function(data) {
-
-        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-        $("#match-name").text(data.name);
-        $("#match-img").attr("src", data.photo);
-
-        // Show the modal with the best match
-        $("#results-modal").modal("toggle");
-
-      });
-    } else {
-      alert("Please fill out all fields before submitting!");
-    }
-  });
+    });

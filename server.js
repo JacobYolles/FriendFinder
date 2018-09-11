@@ -12,11 +12,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
+app.use(express.static(path.join(__dirname, "./app/public")));
+
 // Static files
 // needs to be called before the routes in order to work
-app.use(express.static('app/public'));
+
+// MARK OFF THE ABOVE.
 
 //Router
+var friendsArray = require("./app/data/friends.js");
 require('./app/routing/api-routes.js')(app); 
 require('./app/routing/html-routes.js')(app);
 
