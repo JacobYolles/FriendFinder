@@ -45,7 +45,7 @@ module.exports = function (app) {
         match.photo = checkFriend.photo;
         match.bestDiff = newDiff;
       }
-    }
+    };
 
     console.log(match)
     friendsArray.push(data);
