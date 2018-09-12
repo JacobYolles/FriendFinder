@@ -48,8 +48,9 @@ module.exports = function (app) {
     };
 
     console.log(match)
-    friendsArray.push(data);
     res.json(match);
+    friendsArray.push(data);
+ 
     
   })
 };
