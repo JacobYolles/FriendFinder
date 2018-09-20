@@ -6,4 +6,4 @@ The user must input their name and a link to their photo image. Then they must a
 
 When the user has successfully submitted their survey and those scores have been tallied and then compared against all other of the set of 10 characters data, the closest match will be returned in a modal and congratulate the user for being similar to that cartoon character!
 
-I hope you have fun playing with my friend finder!
+I hope you have fun playing with my Friend Finder!
